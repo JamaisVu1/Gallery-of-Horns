@@ -1,6 +1,6 @@
 // chatGPT assisted with the gallery, beasts came from lab 1 assignment
 import React from  'react';
-import HornedBeast from '../hornedBeast/HornedBeast';
+import HornedBeast from '../hornedBeast/HornedBeast.jsx';
 
 const Gallery = () => {
     const beasts =  [
@@ -52,4 +52,4 @@ const Gallery = () => {
 
 };
 
-export defualt Gallery;
+export default Gallery;
