@@ -3,7 +3,7 @@ import React from "react";
 import HornedBeast from "../hornedBeast/HornedBeast.jsx";
 import beasts from "../beastList/beasts.json";
 
-
+// console.log(beasts);
 
 const Gallery = () => {
   return (
