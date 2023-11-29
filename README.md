@@ -16,15 +16,22 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 6:08
 
+Finish time: 6:31
+
+Actual time needed to complete: 23 mins
+
+Number and name of feature: Bootstrap
+
+Estimate of time needed to complete: 30 mins
+
+Start time: 6:33
+
 Finish time: 
 
 Actual time needed to complete: 
-
-
-
-
-
-
+//
+//
+//
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
