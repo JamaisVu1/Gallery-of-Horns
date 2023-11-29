@@ -7,8 +7,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 // console.log(beasts);
-
-const Gallery = () => {
+// gpt assisted
+const Gallery = ({ beasts, onSelectBeast }) => {
   return (
     <Container>
       <Row>
@@ -18,6 +18,7 @@ const Gallery = () => {
               title={beast.title}
               image={beast.image_url}
               description={beast.description}
+              onSelect={onSelectBeast}
             />
           </Col>
         ))}
