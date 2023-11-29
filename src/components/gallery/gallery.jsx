@@ -2,30 +2,31 @@
 import React from "react";
 import HornedBeast from "../hornedBeast/HornedBeast.jsx";
 import beasts from "../beastList/beasts.json";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 // console.log(beasts);
 
 const Gallery = () => {
   return (
-    <div>
-      {beasts.map((beast) => (
-        <HornedBeast
-          key={beast._id}
-          title={beast.title}
-          image={beast.image_url}
-          description={beast.description}
-        />
-      ))}
-    </div>
+    <Container>
+      <Row>
+        {beasts.map((beast) => (
+          <Col key={beast._id} xs={12} sm={6} md={4} lg={3}>
+            <HornedBeast
+              title={beast.title}
+              image={beast.image_url}
+              description={beast.description}
+            />
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 };
 
-
-
 export default Gallery;
-
-
-
 
 // const Gallery = () => {
 //     const beasts =  [
