@@ -39,13 +39,6 @@ Estimate of time needed to complete: 1.5 hours
 
 Start time: 4:00
 
-Finish time: 
+Finish time: 5:09
 
 
-Number and name of feature:
-
-Estimate of time needed to complete: 
-
-Start time:
-
-Finish time: 
