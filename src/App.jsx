@@ -7,6 +7,7 @@ import data from "./components/beastList/beasts.json";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 //gpt helped rework for modal
 function App() {
   const [selectedBeast, setSelectedBeast] = useState(null);
