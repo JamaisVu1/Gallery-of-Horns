@@ -1,18 +1,59 @@
 // chatGPT assisted with the gallery, beasts came from lab 1 assignment
-import React from "react";
+import React, { useState } from "react";
 import HornedBeast from "../hornedBeast/HornedBeast.jsx";
 import beasts from "../beastList/beasts.json";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Form from 'react-bootstrap/Form';
 
 // console.log(beasts);
-// gpt assisted
+// gpt assisted with different aspect of this component
+
 const Gallery = ({ beasts, onSelectBeast }) => {
+  const [selectedHorns, setSelectedHorns] = useState(null);
+  const [displayBeasts, setDisplayBeasts] = useState(beasts);
+
+  const handleFilterChange = (e) => {
+    const hornsFilter = e.target.value;
+    setSelectedHorns(hornsFilter);
+
+   
+    const filteredBeasts = beasts.filter(beast => {
+      if (hornsFilter === 'all') {
+        return true; 
+      } else if (hornsFilter === '3ormore') {
+        return beast.horns >= 3; 
+      } else {
+        return beast.horns === parseInt(hornsFilter, 10); 
+      }
+    });
+
+    setDisplayBeasts(filteredBeasts);
+  };
+
   return (
     <Container>
+      
+      <Form>
+        <Form.Group controlId="filterByHorns">
+          <Form.Label>Filter by Number of Horns:</Form.Label>
+          <Form.Control
+            as="select"
+            value={selectedHorns || 'all'}
+            onChange={handleFilterChange}
+          >
+            <option value="all">All Horns</option>
+            <option value="1">One Horn</option>
+            <option value="2">Two Horns</option>
+            <option value="3ormore">Three or More Horns</option>
+          </Form.Control>
+        </Form.Group>
+      </Form>
+
+      
       <Row>
-        {beasts.map((beast) => (
+        {displayBeasts.map((beast) => (
           <Col key={beast._id} xs={12} sm={6} md={4} lg={3}>
             <HornedBeast
               title={beast.title}
@@ -26,6 +67,9 @@ const Gallery = ({ beasts, onSelectBeast }) => {
     </Container>
   );
 };
+
+
+// 1-3 horns, two have 100
 
 export default Gallery;
 
