@@ -41,4 +41,12 @@ Start time: 4:00
 
 Finish time: 5:09
 
+Day 3
 
+Number and name of feature: Filter by Numbers of Horns
+
+Estimate of time needed to complete: 1.5 hours
+
+Start time: 5:00
+
+Finish time: 
