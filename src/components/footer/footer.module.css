@@ -1,6 +1,6 @@
 .foot{
     font-size: larger;
-    background: rgb(145, 148, 145);
+    background: linear-gradient(to bottom,#00a0d6, #001f3f);
     color: rgb(27, 25, 25);
     text-align: left;
     padding: 1em;
